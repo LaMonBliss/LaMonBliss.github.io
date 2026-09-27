@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La'Mon Bliss - developer portfolio">
+    <title>La'Mon Bliss | Developer Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a class="site-title" href="#home">La'Mon Bliss</a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div>
+                    <p class="eyebrow">Developer Portfolio</p>
+                    <h1>Hello, I’m <span>La'Mon Bliss</span>.</h1>
+                    <p class="hero-text">
+                        I’m a technical consultant and infrastructure engineer with over a decade in IT, now sharpening my software development skills through a Computer Science degree at Full Sail University. I enjoy building practical, well structured programs, from production cloud services to console applications, and turning messy problems into clean, working code.
+                    </p>
+                    <div class="button-row">
+                        <a class="button primary" href="#projects">View My Projects</a>
+                        <a class="button secondary" href="assets/LaMonBliss_Resume.pdf" target="_blank" rel="noopener">View Résumé</a>
+                    </div>
+                </div>
+
+                <img class="profile-image" src="images/formula-fusion-main-menu.png" alt="Formula Fusion running in the console, showing the main menu with the player name, score, and difficulty">
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container narrow">
+                <p class="section-label">About Me</p>
+                <h2>Who I Am as a Developer</h2>
+                <p>
+                    My path into development started on the operations side, keeping infrastructure and services running, which taught me to care about reliability and clean design. Over eleven years I grew from system administration into automation and building software, and I founded and now operate a production SaaS platform along the way. I am formalizing my computer science foundation at Full Sail, and the part of programming I enjoy most is taking a large, intimidating problem and breaking it into small pieces that each just work.
+                </p>
+
+                <div class="skills-grid">
+                    <article class="info-card">
+                        <h3>Language</h3>
+                        <p>C++ with classes, objects, vectors, structs, and split header and source files</p>
+                    </article>
+
+                    <article class="info-card">
+                        <h3>Concepts</h3>
+                        <p>Object oriented design, input validation, file input and output, and refactoring into reusable helpers</p>
+                    </article>
+
+                    <article class="info-card">
+                        <h3>Tools &amp; Workflow</h3>
+                        <p>Visual Studio, Git and GitHub, branches and pull requests, and planning with GitHub issues</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section alternate-background">
+            <div class="container">
+                <p class="section-label">Featured Work</p>
+                <h2>Projects</h2>
+                <p class="section-intro">
+                    The project I built this term in COS119, showing how I plan, build, and refine a program over time.
+                </p>
+
+                <div class="project-grid">
+                    <article class="project-card">
+                        <img src="images/formula-fusion-title.png" alt="Formula Fusion title screen with the game name in ASCII art and a water molecule drawn as H bonded to O bonded to H">
+                        <div class="project-content">
+                            <p class="project-type">C++ Console Application</p>
+                            <h3>Formula Fusion</h3>
+                            <p>
+                                A console chemistry game built in C++ where you fuse elements to build known compounds and guess compounds from their formulas. It is backed by the full 118 element periodic table and a library of compounds, and it saves your high scores between runs. I built it over four weeks for COS119, planning each milestone with GitHub issues and version control.
+                            </p>
+
+                            <h4>Major Features</h4>
+                            <ul>
+                                <li>Two game modes, Guess It and Build It, with quick or endless rounds and Easy, Medium, and Hard difficulty.</li>
+                                <li>A points and high score system that ranks the top ten by name and saves to a file so scores carry over between runs.</li>
+                                <li>Live ASCII molecule diagrams, a hint option, a How to Play screen, input validation, and a clear menu driven flow.</li>
+                            </ul>
+
+                            <h4>Tools &amp; Technologies</h4>
+                            <p>
+                                C++ (C++20), Visual Studio, Git and GitHub for version control, object oriented design across Element, Compound, and Game classes, vectors and structs, and file input and output.
+                            </p>
+
+                            <h4>Development Challenge</h4>
+                            <p>
+                                As I kept adding features, both game modes ended up sharing the same steps for picking a random question and showing the result, and I found myself copying that code into two places. The trouble was that every change then meant editing both copies, which is exactly how bugs sneak in. I first tried keeping the two versions in sync by hand, but that got error prone fast. I fixed it by refactoring the shared logic into single helper functions, one round runner and one result function that both modes call, so that logic now lives in one place and I only have to fix it once.
+                            </p>
+
+                            <img src="images/formula-fusion-gameplay.png" alt="Formula Fusion Guess It mode correctly identifying the formula H2O as Water and awarding ten points" style="width:100%; border-radius:8px; margin-top:6px;">
+
+                            <h4>What I Learned</h4>
+                            <p>
+                                This project taught me how to structure a program so it can keep growing without becoming fragile. Splitting features into small single purpose functions, separating my classes into header and source files, and using Git branches and pull requests for every change all kept the codebase easy to work in as it got bigger.
+                            </p>
+
+                            <div class="project-links">
+                                <a class="text-link" href="https://github.com/LaMonBliss/COS119" target="_blank" rel="noopener">View Repository</a>
+                                <a class="text-link" href="https://youtu.be/CYzT_u92Io8" target="_blank" rel="noopener">Watch Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container narrow contact-section">
+                <p class="section-label">Contact</p>
+                <h2>Let’s Connect</h2>
+                <p>
+                    I am always open to talking about software, infrastructure, and new opportunities. Reach me through any of the links below.
+                </p>
+
+                <div class="contact-links">
+                    <a class="button primary" href="https://github.com/LaMonBliss" target="_blank" rel="noopener">GitHub</a>
+                    <a class="button secondary" href="https://www.linkedin.com/in/lamonbliss" target="_blank" rel="noopener">LinkedIn</a>
+                    <a class="button secondary" href="mailto:lamonbliss@gmail.com">Professional Email</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 La'Mon Bliss. Built with HTML, CSS, GitHub, and GitHub Pages.</p>
+        </div>
+    </footer>
+</body>
+</html>
